@@ -1,50 +1,37 @@
 #outer_div {
   display: flex;
-border: 1px solid #bd9d9d;
+  border: 1px solid #bd9d9d;
 
-/* padding-left: 30px;
+  /* padding-left: 30px;
 margin: 10px 30px;
 padding-right: 30px; */
-
-
 }
 
-
-#registerForm{
-background-color: aqua;
-/* width: 100%;  */
-width: 50%;
-padding-left: 30px;
-/* justify-content: center; */
-
+#registerForm {
+  background-color: aqua;
+  /* width: 100%;  */
+  width: 50%;
+  padding-left: 30px;
+  /* justify-content: center; */
 }
 
-#img{
-width: fit-content;
-height: fit-content !important;
+#img {
+  width: fit-content;
+  height: fit-content !important;
 }
 
-input{
-    border: 1px solid black;
-    width: 60%;
-   
-
-
+input {
+  border: 1px solid black;
+  width: 60%;
 }
-label{
-    font-size:22px;
-    /* margin-top: 10px;
+label {
+  font-size: 22px;
+  /* margin-top: 10px;
     padding-top: 10px; */
-  
 }
-
-
-
 
 /* btns */
-#submit{
- 
-
+#submit {
   align-items: center;
   background-color: #f9f5f4;
   border: 2px solid #111;
@@ -53,7 +40,7 @@ label{
   color: #111;
   cursor: pointer;
   display: flex;
-  font-family: Inter,sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 16px;
   height: 48px;
   justify-content: center;
@@ -66,7 +53,7 @@ label{
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  margin-top:20px;
+  margin-top: 20px;
   margin-left: 18%;
 }
 
@@ -81,12 +68,12 @@ label{
   position: absolute;
   top: -2px;
   transform: translate(8px, 8px);
-  transition: transform .2s ease-out;
+  transition: transform 0.2s ease-out;
   z-index: -1;
 }
 
 #submit:hover:after {
- color: #fff;
+  color: #fff;
 }
 
 #submit:active {
@@ -98,23 +85,20 @@ label{
   outline: 0;
 }
 
-form{
-
+form {
   display: block;
-  margin:auto;
-  margin-top:10%
+  margin: auto;
+  margin-top: 10%;
 }
 
- 
 /* navbar */
-#nav{
-
-    display: flex;
-    justify-content:space-around
+#nav {
+  display: flex;
+  justify-content: space-around;
 }
-#nav p{
-    padding:10px;
-    margin:10px;
-    font-weight: 700;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+#nav p {
+  padding: 10px;
+  margin: 10px;
+  font-weight: 700;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }

@@ -6,48 +6,51 @@ import { useEffect } from "react";
 import { Logout } from "../Redux/Reducer";
 function Navbar() {
   const [auth, setAuht] = useState(false);
-const dispatch = useDispatch()
-const nav=useNavigate()
+  const dispatch = useDispatch();
+  const nav = useNavigate();
   const data = useSelector((store) => store.data);
- 
 
-  const handle=()=>{
-   dispatch(Logout(data.length - 1))
-   nav('/login')
-   
-  
-
-  }
+  const handle = () => {
+    dispatch(Logout(data.length - 1));
+    nav("/login");
+  };
 
   useEffect(() => {
     return () => {
       if (data.length > 0 && data[data.length - 1].details.auth === true) {
-
-        console.log(data[data.length - 1].details.auth)
+        console.log(data[data.length - 1].details.auth);
         setAuht(true);
       }
     };
-  }, [])
+  }, []);
 
   return (
     <div id="nav">
       <Link to="/dashbord">
         <p>Dashborad</p>
       </Link>
-      
-     {auth ?  <p onClick={handle} style={{cursor:"pointer"}}> Logout</p> :<Link to="/login">
-        <p>Login</p>
-      </Link>
 
+      {auth ? (
+        <p onClick={handle} style={{ cursor: "pointer" }}>
+          {" "}
+          Logout
+        </p>
+      ) : (
+        <Link to="/login">
+          <p>Login</p>
+        </Link>
+      )}
 
-
-  }
-
-{auth ? <p style={{cursor:"pointer"}}> {data[data.length - 1].details.name}</p>:
-      <Link to="/">
-        <p>Register</p>
-      </Link>
-}
+      {auth ? (
+        <p style={{ cursor: "pointer" }}>
+          {" "}
+          {data[data.length - 1].details.name}
+        </p>
+      ) : (
+        <Link to="/">
+          <p>Register</p>
+        </Link>
+      )}
     </div>
   );
 }

@@ -57,7 +57,7 @@ function Register() {
   };
   return (
     <div>
-        <Navbar/>
+      <Navbar />
       <div id="outer_div">
         <div id="img">
           <img
