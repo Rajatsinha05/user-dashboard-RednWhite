@@ -33,7 +33,7 @@ function Login() {
       alert("Please select correct details");
     }
 
-    console.log(data);
+    
   };
 
   return (

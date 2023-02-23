@@ -15,7 +15,7 @@ function Register() {
   const nav = useNavigate();
 
   const Data = useSelector((store) => store.data);
-  console.log("Data: ", Data);
+  
 
   const dispatch = useDispatch();
   const handleSubmit = (e) => {

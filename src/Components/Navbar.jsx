@@ -18,7 +18,7 @@ function Navbar() {
   useEffect(() => {
     return () => {
       if (data.length > 0 && data[data.length - 1].details.auth === true) {
-        console.log(data[data.length - 1].details.auth);
+        
         setAuht(true);
       }
     };

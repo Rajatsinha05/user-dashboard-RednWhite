@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 
 function Dashborad() {
   const data = useSelector((store) => store.data);
-  console.log(data[data.length - 1].details);
+  
   return (
     <div>
       <Navbar />
