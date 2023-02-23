@@ -52,9 +52,7 @@ function Register() {
         })
       );
 
-      setTimeout(() => {
-        nav("/login");
-      }, 3000);
+      nav("/login");
     }
   };
   return (

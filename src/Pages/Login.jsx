@@ -28,7 +28,7 @@ function Login() {
     ) {
       dispatch(Loginset(data.length - 1));
 
-      nav("/");
+      nav("/dashbord");
     } else {
       alert("Please select correct details");
     }

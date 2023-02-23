@@ -9,18 +9,11 @@ function Navbar() {
 const dispatch = useDispatch()
 const nav=useNavigate()
   const data = useSelector((store) => store.data);
-  // if(data.length>0) {
-
-  //   console.log(data[data.length - 1].details.auth);
-  //   setAuht(data[data.length - 1].details.auth);
-  // }
-
+ 
 
   const handle=()=>{
    dispatch(Logout(data.length - 1))
-   setTimeout(() => {
-    nav('/login')
-   }, 2000)
+   nav('/login')
    
   
 
@@ -38,11 +31,11 @@ const nav=useNavigate()
 
   return (
     <div id="nav">
-      <Link to="/">
+      <Link to="/dashbord">
         <p>Dashborad</p>
       </Link>
       
-     {auth ?  <p onClick={handle}> Logout</p> :<Link to="/login">
+     {auth ?  <p onClick={handle} style={{cursor:"pointer"}}> Logout</p> :<Link to="/login">
         <p>Login</p>
       </Link>
 
@@ -50,10 +43,11 @@ const nav=useNavigate()
 
   }
 
-
-      <Link to="/register">
+{auth ? <p style={{cursor:"pointer"}}> {data[data.length - 1].details.name}</p>:
+      <Link to="/">
         <p>Register</p>
       </Link>
+}
     </div>
   );
 }
